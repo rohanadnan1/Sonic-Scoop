@@ -1,0 +1,24 @@
+.your_library {
+    height: 18rem;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+/* these styilings will be applied to webkit browsers like chrome or safari but not on firefox. for firefox you can use the code written above */
+
+.your_library::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+
+.your_library::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.your_library::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 10px;
+}
+
+.your_library::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
