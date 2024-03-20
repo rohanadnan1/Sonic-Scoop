@@ -8,7 +8,7 @@ import "./sidebar.css"
 
 const Sidebar = () => {
     return (
-        <div className="w-1/4 sidebar p-2">
+        <div className="w-1/4 sidebar p-2 fixed left-0 top-0">
             <div className="nav secondary_bg rounded-lg p-6">
                 <div className="flex items-center gap-4">
                     <BiSolidHome className="font-bold text-xl" />
@@ -20,13 +20,13 @@ const Sidebar = () => {
                 </div>
             </div>
             <div className="mt-2 secondary_bg rounded-lg px-2 py-2">
-                <div className="flex px-4 justify-between mb-4 items-center gap-4">
+                <div className="flex px-1 justify-between mb-4 items-center gap-8">
                     <div className="flex gap-2 items-center">
                         <BiLibrary className="font-bold text-xl" />
                         <span>Your library</span>
                     </div>
-                    <button className="hover:bg-black/25 rounded-[50%] p-2">
-                        <FaPlus className="font-bold text-xl" />
+                    <button className="hover:bg-[#242424] rounded-[50%] p-2">
+                        <FaPlus className="font-bold text-lg" />
                     </button>
                 </div>
                 <div className="your_library">
