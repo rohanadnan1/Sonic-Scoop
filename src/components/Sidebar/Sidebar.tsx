@@ -3,7 +3,7 @@ import { BiSolidHome, BiLibrary } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
 import { FaPlus } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
-// import Signup from "./Signup";
+import Signup from "./Signup";
 import "./sidebar.css"
 
 const Sidebar = () => {
@@ -71,7 +71,7 @@ const Sidebar = () => {
                 <span className="text-white font-bold">English</span>
             </button>
 
-            {/* <Signup /> */}
+            <Signup />
         </div>
     );
 };
