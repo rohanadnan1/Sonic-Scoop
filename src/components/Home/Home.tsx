@@ -95,13 +95,9 @@ const Home = () => {
             <span>Show All</span>
         </div>
         <div className="grid  gap-6 grid-cols-5">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {songs.map((s)=>{
+                return <Card key={s.id} song={s} />
+            })}
         </div>
     </div>
     <SongBar />
