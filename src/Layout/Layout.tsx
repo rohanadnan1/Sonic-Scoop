@@ -1,7 +1,11 @@
 import React from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 
-const Layout = ({ children }: any) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="flex gap-2">
       <Sidebar />

@@ -2,8 +2,14 @@ import React from "react";
 import "./card.css";
 import { FaPause, FaPlay } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import {Song} from '../Home/Home'
 
-const Card = ({ song }: any) => {
+interface CardProps {
+  song: Song;
+  key: number;
+}
+
+const Card = ({ song }: CardProps) => {
   const { isPlaying } = useSelector((state: any) => state.song);
   console.log(isPlaying);
 
