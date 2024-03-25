@@ -11,7 +11,6 @@ interface CardProps {
 
 const Card = ({ song }: CardProps) => {
   const { isPlaying } = useSelector((state: any) => state.song);
-  console.log(isPlaying);
 
   return (
     song && (

@@ -5,8 +5,12 @@ import { FaPlus } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import Signup from "./Signup";
 import "./sidebar.css"
+import { useSelector } from "react-redux";
 
 const Sidebar = () => {
+
+    const {showBanner} = useSelector((state:any)=>state.banner)
+
     return (
         <div className="w-1/4 sidebar p-2 fixed left-0 top-0">
             <div className="nav secondary_bg rounded-lg p-6">
@@ -52,26 +56,15 @@ const Sidebar = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt-4 px-4 flex gap-4 flex-wrap">
-                <a className="text-xs text-gray-300 mx-4" href="#">
-                    Legal
-                </a>
-                <a className="text-xs text-gray-300 mx-4" href="#">
-                    Privacy Center
-                </a>
-                <a className="text-xs text-gray-300 mx-4" href="#">
-                    Privacy Policy
-                </a>
-                <a className="text-xs text-gray-300 mx-4" href="#">
-                    Cookies
-                </a>
-            </div>
+            
             <button className="mx-4 mt-12 text-sm border-white border rounded-full flex gap-2 px-3 py-1 items-center  text-white bottom-2">
                 <TbWorld />
                 <span className="text-white font-bold">English</span>
             </button>
 
-            <Signup />
+            {
+                showBanner && <Signup />
+            }
         </div>
     );
 };
