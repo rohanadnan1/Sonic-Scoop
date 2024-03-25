@@ -5,6 +5,7 @@ import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import Card from "../Card/Card";
 import SongBar from "../Masterbar/SongBar";
 import { Link } from "react-router-dom";
+import artistImage from "../../assets/artist/artist.jpg";
 
 export interface Song {
   id: number;
@@ -17,42 +18,43 @@ const songs: Song[] = [
   {
       id: Math.random() * Date.now(),
       title: "Tum Hi Ho",
-      artist: "Arijit Singh",
-      mp3: new Audio("/assets/mp3/Tum Hi Ho.mp3"),
+      artist: "https://i.tribune.com.pk/media/images/chahat1703590298-0/chahat1703590298-0.jpg",
+      mp3: new Audio("/assets/mp3/one.mp3"),
   },
   {
       id: Math.random() * Date.now(),
       title: "Ae Dil Hai Mushkil",
-      artist: "Arijit Singh",
-      mp3: new Audio("/assets/mp3/ae.mp3"),
+      artist: artistImage,
+      mp3: new Audio("/assets/mp3/two.mp3"),
   },
   {
       id: Math.random() * Date.now(),
       title: "Mirchi Awards",
-      artist: "Arijit Singh",
-      mp3: new Audio("/assets/mp3/Mashup.mp3"),
+      artist: artistImage,
+      mp3: new Audio("/assets/mp3/one.mp3"),
   },
   {
       id: Math.random() * Date.now(),
       title: "Judaiyaan",
-      artist: "Arijit Singh",
-      mp3: new Audio("/assets/mp3/Judaiyaan.mp3"),
+      artist: artistImage,
+      mp3: new Audio("/assets/mp3/one.mp3"),
   },
   {
       id: Math.random() * Date.now(),
       title: "Heeriye",
-      artist: "Arijit Singh",
-      mp3: new Audio("/assets/mp3/Heeriye.m4a"),
+      artist: artistImage,
+      mp3: new Audio("/assets/mp3/two.mp3"),
   },
   {
       id: Math.random() * Date.now(),
       title: "Tu hi Hai Aashiqui",
-      artist: "Arijit Singh",
-      mp3: new Audio("/assets/mp3/Tu Hi Hai Aashiqui.mp3"),
+      artist: artistImage,
+      mp3: new Audio("/assets/mp3/one.mp3"),
   },
 ];
 
 const Home = () => {
+    
   return (
     <Layout>
     <div className="flex justify-between ml-4  py-4 rounded-[2px] mt-2 px-8 secondary_bg items-center ">
@@ -76,7 +78,7 @@ const Home = () => {
             </Link>
         </div>
     </div>
-    <div className="tertiary_bg mx-4 px-4 py-4 ">
+    <div className="tertiary_bg mx-4 px-4 py-4 h-[100vh]">
         <div className="flex justify-between my-4 items-center">
             <span className="text-xl font-bold hover:underline cursor-pointer">
                 Focus
@@ -95,8 +97,8 @@ const Home = () => {
             <span>Show All</span>
         </div>
         <div className="grid  gap-6 grid-cols-5">
-            {songs.map((s)=>{
-                return <Card key={s.id} song={s} />
+            {songs.map((song) => {
+                return <Card key={song.id} song={song} />;
             })}
         </div>
     </div>
